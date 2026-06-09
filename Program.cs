@@ -34,6 +34,14 @@ while (true)
     Console.WriteLine($"Physical:     {heightMeters} m | {weightKg} kg");
     Console.WriteLine($"Battle Power: {totalStats} Total Base Stats");
     Console.WriteLine("--------------------------------------------------");
+    Console.WriteLine("BASE STATS:");
+
+    foreach (var stat in pokemon.Stats)
+    {
+        Console.WriteLine($"   {stat.Stat.Name.ToUpper().PadRight(15)} : {stat.BaseStat}");
+    }
+
+    Console.WriteLine("--------------------------------------------------");
     Console.WriteLine($"[STATUS] Source: {statusMsg}");
     Console.WriteLine("==================================================");
 }
